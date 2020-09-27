@@ -1,0 +1,5 @@
+black #000000
+purple #291749
+gold #B5A269
+gray #6E6A6F
+white #F7F5FB
