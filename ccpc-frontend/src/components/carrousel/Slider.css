@@ -1,0 +1,109 @@
+/* Slider component styling */
+.slider {
+  position: relative;
+  height: 400px;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Slide component styling */
+
+.slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.slide img {
+  height: 300px;
+  width: 300px;
+}
+
+.info {
+  color: white;
+  width: 30%;
+  height: auto;
+}
+
+/* Arrow component styling */
+.arrowRight {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+}
+
+.arrowLeft {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+}
+
+.arrowRight:hover {
+  transform: scale(1.1);
+}
+
+.arrowLeft:hover {
+  transform: scale(1.1);
+}
+
+.arrowImgRight {
+  transform: translateX(2px);
+}
+
+.arrowImgLeft {
+  transform: translateX(-2px);
+}
+
+.arrowImgRight:focus {
+  outline: 0;
+}
+
+.arrowImgLeft:focus {
+  outline: 0;
+}
+
+/* Page dot styling */
+.activeSlide {
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgb(128, 128, 128);
+}
+
+.notActiveSlide {
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgb(29, 29, 29);
+}
+
+.dots {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
