@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyparser = require('body-parser');
 const cors = require('cors');
+const productRoutes = require("./routes/productRoutes");
 
 dotenv.config();
 
@@ -22,7 +23,9 @@ app.use(cors());
 //Super simple get request
 app.get('/', (req, res) => {
     res.send("Simple get request");
-})
+});
+
+app.use('/api/products', productRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}!`);
