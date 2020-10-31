@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BroswerRouter, BrowserRouter, Route, Switch} from 'react-router-dom';
-import {StateProvider} from "./providers/StateProvider";
-import reducer, {initialState} from "./reducers/reducer";
+import {StoreProvider} from './store';
+import rootReducer from './store/rootReducer';
+import rootActions from './store/rootActions';
 
 import App from './App';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <BrowserRouter>
-      <StateProvider initialState={initialState} reducer={reducer}>
+      <StoreProvider rootReducer={rootReducer} rootActions={rootActions}>
         <App />
-      </StateProvider>
+      </StoreProvider>
     </BrowserRouter>,
   rootElement
 );
-

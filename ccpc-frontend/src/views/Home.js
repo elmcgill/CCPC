@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Slider from "../components/carrousel/Slider";
 import Product from "../components/products/Product";
 import "./Home.css";
-import {useStateValue} from "../providers/StateProvider";
 import productImg from "../imgs/slider-pc-1.png";
+import {useStore, useActions} from '../store';
+import axios from "axios";
 
 const productOne = {
   src:productImg,
@@ -18,11 +19,7 @@ const productOne = {
   psu: "EVGA Bronze 500 W"
 }
 
-function Home({loading}) {
-
-  const [{products}, dispatch] = useStateValue();
-
-  console.log(products);
+function Home({loading, products}) {
 
   return (
     <div className='home'>
@@ -35,7 +32,7 @@ function Home({loading}) {
         </div>
         <h1>Entry Level Gaming Computers</h1>
         <div className="home_products">
-          {loading ? <h1>Loading Products</h1> : products[0].map((product, index) => (
+          {loading ? <h1>Loading Products</h1> : products.map((product, index) => (
             <Product key={index} src={productImg} title={product.title} price={product.price} cpu={product.cpu} graphics={product.gpu} mobo={product.motherboard} mem={product.memory} storage={product.storage} case={product.case} psu={product.psu} />
           ))}
         </div>

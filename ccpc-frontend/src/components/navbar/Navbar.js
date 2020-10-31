@@ -44,13 +44,12 @@ function Navbar() {
                     </li>
                     <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                          <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                             Products <i className='fas fa-caret-down' />
+                             Prebuilts
                          </Link>
-                         {dropdown && <Dropdown />}
                     </li>
                     <li className='nav-item'>
                         <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
-                            Contact Us
+                            Configure
                         </Link>
                     </li>
                     <li className='nav-item'>

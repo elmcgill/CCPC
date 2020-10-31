@@ -1,35 +1,33 @@
 import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {useStore, useActions} from './store';
 import "./App.css";
 import axios from "axios";
-import {useStateValue} from "./providers/StateProvider";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./views/Home";
 
 function App() {
 
-  const [{}, dispatch] = useStateValue();
+  const {state} = useStore();
+  const {productActions} = useActions();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products/")
+    axios.get('http://localhost:5000/api/products/')
     .then((res) => {
-      console.log(res.data.data);
-      dispatch({
-        type: "GET_PRODUCTS",
-        item: res.data.data
-      });
-      setLoading(false);
+      state.products.length === 0 && productActions.retrieveProducts(res.data.data)
     });
-  }, [dispatch.products]);
+
+    setLoading(false);
+  }, [state.products, productActions]);
 
   return (
     <Router>
       <Navbar />
       <Switch>
         <Route path='/'>
-          <Home loading={loading} />
+          <Home loading={loading} products={state.products}/>
         </Route>
       </Switch>
     </Router>
