@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const ProductSchema = mongoose.Schema({
+    title: {
+        type: String,
+        required: "Product title is required"
+    },
     price: {
         type: Number,
         required: "Product Price is required"
@@ -40,6 +44,10 @@ const ProductSchema = mongoose.Schema({
     psu: {
         type: String,
         required: "Product must have a power supply"
+    },
+    class: {
+        type: String,
+        required: "Product must have a classification"
     }
 });
 

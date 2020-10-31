@@ -1,6 +1,5 @@
 const Product = require("../models/productModel");
-const mongoose = require("mongoose");
-const PRODUCT_KEYS = ['price', 'cpu', 'motherboard', 'memory', 'storage', 'case', 'psu'];
+const PRODUCT_KEYS = ['title','price', 'cpu', 'motherboard', 'memory', 'storage', 'case', 'psu', 'class'];
 
 /*
 * Get all the products stored in the database
@@ -55,7 +54,7 @@ module.exports.new = async (req, res) => {
     try{
         if(!PRODUCT_KEYS.every((item) => req.body.hasOwnProperty(item))){
             res.status(400).json({
-                message: 'Not all keys were present to create new product. Please include: price, cpu, motherboard, memory, storage, case, psu'
+                message: 'Not all keys were present to create new product. Please include: title, price, cpu, motherboard, memory, storage, case, psu, and class'
             });
         } else {
             const data = req.body;
