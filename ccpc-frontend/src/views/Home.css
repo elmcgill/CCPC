@@ -18,32 +18,6 @@
   background-color: #fafafa;
 }
 
-.home_mission {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: 1px solid #cfcfcf;
-  padding: 15px;
-}
-
-.home_mission > h2 {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-}
-
-.home_mission > p {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.home_mission > h3 {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
-
 .home_products {
   display: flex;
   z-index: 1;

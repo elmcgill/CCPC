@@ -1,7 +1,7 @@
 /* Slider component styling */
 .slider {
   position: relative;
-  height: 400px;
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
