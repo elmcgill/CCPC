@@ -1,0 +1,21 @@
+:root {
+  --black: #000000;
+  --purple: #291749;
+  --gold: #b5a269;
+  --gray: #6e6a6f;
+  --white: #f7f5fb;
+}
+
+.container {
+  background-color: #000;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.container > h1 {
+  color: var(--white);
+}
+
+.section > p {
+  color: var(--white);
+}

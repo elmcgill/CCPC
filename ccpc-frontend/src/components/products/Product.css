@@ -56,7 +56,4 @@
 .product:hover {
   transform: scale(1.05);
   transition: transform ease-in-out 0.1s;
-  -webkit-box-shadow: 4px 3px 10px -1px rgba(186, 186, 186, 1);
-  -moz-box-shadow: 4px 3px 10px -1px rgba(186, 186, 186, 1);
-  box-shadow: 4px 3px 10px -1px rgba(186, 186, 186, 1);
 }

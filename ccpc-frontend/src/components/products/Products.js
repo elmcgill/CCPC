@@ -6,15 +6,38 @@ import './Products.css';
 function Products({loading, products}) {
     return (
         <div className="products_div">
-            <h1 className="prebuilt_header">Prebuilt Gaming Computers by Category</h1>
-            <div className="product_category">
-                <h1>Entry Level Gaming Computers</h1>
-                <h3>Get your foot in the door of PC Gaming!</h3>
+            <div className="product_row_light">
+                <div className="product_category_light">
+                    <h1>Entry Level Gaming Computers</h1>
+                    <h3>Get your foot in the door of PC Gaming!</h3>
+                </div>
+                <div className="products">
+                    {loading ? <h1>Loading Products</h1> : products.map((product, index) => (
+                    <Product key={index} src={productImg} title={product.title} price={product.price} cpu={product.cpu} graphics={product.gpu} mobo={product.motherboard} mem={product.memory} storage={product.storage} case={product.case} psu={product.psu} />
+                    ))}
+                </div>
             </div>
-            <div className="products">
-                {loading ? <h1>Loading Products</h1> : products.map((product, index) => (
-                <Product key={index} src={productImg} title={product.title} price={product.price} cpu={product.cpu} graphics={product.gpu} mobo={product.motherboard} mem={product.memory} storage={product.storage} case={product.case} psu={product.psu} />
-                ))}
+            <div className="product_row_dark">
+                <div className="product_category_dark">
+                    <h1>Mid Level Gaming Computers</h1>
+                    <h3>Play all your games at high settings!</h3>
+                </div>
+                <div className="products">
+                    {loading ? <h1>Loading Products</h1> : products.map((product, index) => (
+                    <Product key={index} src={productImg} title={product.title} price={product.price} cpu={product.cpu} graphics={product.gpu} mobo={product.motherboard} mem={product.memory} storage={product.storage} case={product.case} psu={product.psu} />
+                    ))}
+                </div>
+            </div>
+            <div className="product_row_light">
+                <div className="product_category_light">
+                    <h1>Enthusiast Level Gaming Computers</h1>
+                    <h3>For someone who wants the best of the best!</h3>
+                </div>
+                <div className="products">
+                    {loading ? <h1>Loading Products</h1> : products.map((product, index) => (
+                    <Product key={index} src={productImg} title={product.title} price={product.price} cpu={product.cpu} graphics={product.gpu} mobo={product.motherboard} mem={product.memory} storage={product.storage} case={product.case} psu={product.psu} />
+                    ))}
+                </div>
             </div>
         </div>
     )

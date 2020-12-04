@@ -6,14 +6,12 @@ import axios from "axios";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./views/Home";
-import Products from "./components/products/Products";
 
 function App() {
 
   const {state} = useStore();
   const {productActions} = useActions();
   const [loading, setLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/products/')
@@ -24,13 +22,9 @@ function App() {
     setLoading(false);
   }, [state.products, productActions]);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  }
-
   return (
     <Router>
-      <Navbar toggle={toggle}/>
+      <Navbar/>
       <Switch>
         <Route path='/'>
           <Home loading={loading} products={state.products}/>
