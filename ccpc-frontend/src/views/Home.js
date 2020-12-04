@@ -6,11 +6,16 @@ import "./Home.css";
 
 function Home({loading, products}) {
 
+  const myFunction = () => {
+    var item = document;
+    console.log(item);
+  }
+
   return (
     <div className='home'>
       <Slider id='slider'/>
       <Products id='products' loading={loading} products={products} />
-      <About/>
+      <About id='about' />
     </div>
   );
 }

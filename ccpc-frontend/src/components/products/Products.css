@@ -1,4 +1,4 @@
-.products_div {
+.products {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
@@ -7,11 +7,13 @@
   margin-right: auto;
   justify-content: flex-start;
   align-items: center;
+  background-color: green;
 }
 
-.products {
+.products_container {
   display: flex;
   max-width: 1500px !important;
+  height: 100%;
   z-index: 1;
   margin: 10px;
 }

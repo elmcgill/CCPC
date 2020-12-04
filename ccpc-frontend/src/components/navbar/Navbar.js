@@ -21,7 +21,7 @@ function Navbar() {
     return(
         <>
             <nav className='navbar'>
-                <LinkS to='/' className='navbar-logo' onClick={toggleHome}>CCPC</LinkS>
+                <LinkS to='slider' className='navbar-logo' onClick={toggleHome}>CCPC</LinkS>
                 <div className='menu-icon' onClick={handleClick}>
                     {click ? <Close className='close-icon' fontSize={'large'}/> : <Menu className='menu' fontSize={'large'}/>}
                 </div>
@@ -34,7 +34,7 @@ function Navbar() {
                     <li className='nav-item'>
                         <LinkS to='about' className='nav-links' onClick={closeMobileMenu} smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                             About Us
-                        </LinkS>
+                         </LinkS>
                     </li>
                     <li className='nav-item'>
                         <LinkR to='/sign-in' className='nav-links' onClick={closeMobileMenu}>
