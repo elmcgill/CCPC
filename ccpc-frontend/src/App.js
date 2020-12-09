@@ -6,6 +6,7 @@ import axios from "axios";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./views/Home";
+import Footer from "./components/footer/Footer";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Home loading={loading} products={state.products}/>
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
