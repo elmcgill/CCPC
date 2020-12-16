@@ -42,6 +42,7 @@
   cursor: pointer;
   align-items: center;
   transition: transform ease-in 0.1s;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .arrowLeft {
@@ -56,22 +57,27 @@
   cursor: pointer;
   align-items: center;
   transition: transform ease-in 0.1s;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .arrowRight:hover {
   transform: scale(1.1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .arrowLeft:hover {
   transform: scale(1.1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .arrowImgRight {
   transform: translateX(2px);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .arrowImgLeft {
   transform: translateX(-2px);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .arrowImgRight:focus {

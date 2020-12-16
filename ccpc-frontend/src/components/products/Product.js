@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 import './Product.css';
 
 function Product(props) {
+
+    let history = useHistory();
+
+    const redirect = () => {
+        history.push(`/product/${props.id}`);
+    }
+
+    useEffect(() => {
+        console.log(props);
+    }, []);
+
     return (
-        <div className='product'>
+        <div className='product' onClick={redirect}>
             <img src={props.src} />
             <div className='product_info'>
                 <h4>{props.title}</h4>
