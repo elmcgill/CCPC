@@ -4,8 +4,6 @@ import Dots from "./Dots";
 import Slide from "./Slide";
 import Arrow from "./Arrow";
 import "./Slider.css";
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import img1 from "../../imgs/slider-pc-1.png";
 import img2 from "../../imgs/slider-pc-2.png";

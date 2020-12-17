@@ -7,7 +7,6 @@ import axios from "axios";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./views/Home";
 import Footer from "./components/footer/Footer";
-import ProductPage from "./views/ProductPage";
 
 function App() {
 
@@ -28,10 +27,9 @@ function App() {
     <Router>
       <Navbar/>
       <Switch>
-        <Route exact path='/'>
+        <Route path='/'>
           <Home loading={loading} products={state.products}/>
         </Route>
-        <Route exact path='/product/:id' component={GetProduct}/>
       </Switch>
       <Footer />
     </Router>

@@ -8,7 +8,10 @@
   width: 100%;
   max-height: 500px;
   min-width: 100px;
+  background-color: #f7f5fb;
   z-index: 1;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .product_info {
@@ -53,5 +56,4 @@
 .product:hover {
   transform: scale(1.05);
   transition: transform ease-in-out 0.1s;
-  cursor: pointer;
 }

@@ -3,15 +3,3 @@ purple #291749
 gold #B5A269
 gray #6E6A6F
 white #F7F5FB
-
-Purple Gradient
-background: rgb(170,124,255);
-background: linear-gradient(160deg, rgba(170,124,255,1) 0%, rgba(90,51,161,1) 33%, rgba(41,23,73,1) 80%);
-
-Silver Gradient
-background: rgb(190,192,194);
-background: linear-gradient(160deg, rgba(190,192,194,1) 0%, rgba(161,162,163,1) 33%, rgba(142,141,141,1) 80%);
-
-Gold Gradient
-background: rgb(226,203,133);
-background: linear-gradient(160deg, rgba(226,203,133,1) 0%, rgba(215,184,89,1) 33%, rgba(181,162,105,1) 80%);
