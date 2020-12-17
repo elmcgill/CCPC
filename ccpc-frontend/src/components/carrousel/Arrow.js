@@ -1,7 +1,7 @@
 import React from "react";
 import "./Slider.css";
-import leftArrow from "../../imgs/left-arrow.svg";
-import rightArrow from "../../imgs/right-arrow.svg";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowsForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 function Arrow(props) {
   return (
@@ -10,9 +10,9 @@ function Arrow(props) {
       className={props.direction === "right" ? "arrowRight" : "arrowLeft"}
     >
       {props.direction === "right" ? (
-        <img className='arrowImgRight' src={rightArrow} />
+        <ArrowsForwardIosIcon className='arrowImgRight' />
       ) : (
-        <img className='arrowImgLeft' src={leftArrow} />
+        <ArrowBackIosIcon className='arrowImgLeft' />
       )}
     </div>
   );
