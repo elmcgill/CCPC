@@ -1,0 +1,140 @@
+:root {
+  --primary: #b5a269;
+}
+
+.display {
+  max-width: 1500px !important;
+  margin-top: 90px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 95px;
+  padding-right: 95px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  max-width: 600px;
+  height: 600px;
+  border: rgb(230, 230, 230) solid 3px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.specs {
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 10px;
+}
+
+.parts {
+  width: 100%;
+  height: 80% !important;
+  border-collapse: collapse;
+  border: 3px solid rgb(230, 230, 230);
+}
+
+.parts tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.spec-header {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.part-header {
+  text-align: left;
+  padding: 10px;
+}
+
+.part {
+  text-align: right;
+  padding: 10px;
+}
+
+.add-to-cart {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn {
+  height: 100%;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #f7f5fb;
+  cursor: pointer;
+  background-color: var(--primary);
+  align-self: center;
+}
+
+.btn:hover {
+  padding: 6px 18px;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.desc-header {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.desc-text {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+.active-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

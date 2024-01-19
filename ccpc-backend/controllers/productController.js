@@ -1,5 +1,5 @@
 const Product = require("../models/productModel");
-const PRODUCT_KEYS = ['title','price', 'cpu', 'motherboard', 'memory', 'storage', 'case', 'psu', 'class'];
+const PRODUCT_KEYS = ['title','price', 'cpu', 'motherboard', 'memory', 'storage', 'case', 'psu', 'class', 'description'];
 
 /*
 * Get all the products stored in the database

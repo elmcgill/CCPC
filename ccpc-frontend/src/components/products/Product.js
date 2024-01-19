@@ -1,9 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './Product.css';
 
 function Product(props) {
+
+    let history = useHistory();
+
+    const navigate = (id) => {
+        console.log(id);
+        history.push(`/product/${id}`);
+    }
+
     return (
-        <div className='product'>
+        <div className='product' onClick={() => navigate(props.id)}>
             <img src={props.src} />
             <div className='product_info'>
                 <h4>{props.title}</h4>

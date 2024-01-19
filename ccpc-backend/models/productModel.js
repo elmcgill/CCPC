@@ -48,6 +48,10 @@ const ProductSchema = mongoose.Schema({
     class: {
         type: String,
         required: "Product must have a classification"
+    },
+    description: {
+        type: String,
+        required: "Product must have a description"
     }
 });
 
